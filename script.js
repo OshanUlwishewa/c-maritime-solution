@@ -1,55 +1,100 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Hero Section Background Image Rotation
-    const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
-    const heroSection = document.querySelector('.hero');
-    let index = 0;
+  const menuToggle = document.querySelector(".menu-toggle")
+  const headerNav = document.querySelector(".header-nav")
+  const header = document.querySelector(".header")
+  const heroBackground = document.querySelector(".hero-background")
 
-    if (heroSection) {
-        setInterval(() => {
-            heroSection.style.backgroundImage = `url(${images[index]})`;
-            index = (index + 1) % images.length;
-        }, 10000); // Change every 10 seconds
+  menuToggle.addEventListener("click", () => {
+    headerNav.classList.toggle("show")
+  })
+
+  // Add active class to current page
+  const currentLocation = location.href
+  const menuItems = document.querySelectorAll(".nav-list a")
+  menuItems.forEach((link) => {
+    if (link.href === currentLocation) {
+      link.classList.add("active")
     }
-    // Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const headerRight = document.querySelector('.header-right');
+  })
 
-    if (menuToggle && headerRight) {
-        menuToggle.addEventListener('click', () => {
-            headerRight.classList.toggle('show');
-        });
+  // Scroll effect for header
+  let lastScrollTop = 0
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    if (scrollTop > lastScrollTop) {
+      header.style.transform = "translateY(-100%)"
+    } else {
+      header.style.transform = "translateY(0)"
     }
+    lastScrollTop = scrollTop
+  })
 
-    // Highlight Active Navigation Link
-    const currentPage = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll(".header-right a");
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault()
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      })
+    })
+  })
 
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute("href").split("/").pop();
-        if (linkHref === currentPage) {
-            link.classList.add("active"); // Add the active class
-        } else {
-            link.classList.remove("active"); // Remove from others
-        }
-    });
+  // Animate elements on scroll
+  const animateOnScroll = () => {
+    const elements = document.querySelectorAll(".animate-fade-in-up")
+    elements.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top
+      const elementBottom = element.getBoundingClientRect().bottom
+      if (elementTop < window.innerHeight && elementBottom > 0) {
+        element.classList.add("animated")
+      }
+    })
+  }
 
-    console.log("Current page path:", window.location.pathname); // Log current page path for debugging
-});
+  window.addEventListener("scroll", animateOnScroll)
+  animateOnScroll() // Initial check on page load
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Get the current page's filename (e.g., "index.html")
-    const currentPage = window.location.pathname.split("/").pop();
+  // Hero background image changer
+  const backgroundImages = ["url('herobackground.jpg')", "url('herobackground1.jpg')", "url('herobackground2.jpg')"]
+  let currentImageIndex = 0
 
-    // Select all navigation links
-    const navLinks = document.querySelectorAll(".header-right a");
+  function changeBackgroundImage() {
+    heroBackground.style.opacity = "0"
+    setTimeout(() => {
+      currentImageIndex = (currentImageIndex + 1) % backgroundImages.length
+      heroBackground.style.backgroundImage = backgroundImages[currentImageIndex]
+      heroBackground.style.opacity = "1"
+    }, 1000)
+  }
 
-    // Loop through links to find and highlight the current page
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute("href").split("/").pop(); // Extract the filename
-        if (linkHref === currentPage) {
-            link.classList.add("active"); // Add the active class
-        } else {
-            link.classList.remove("active"); // Ensure others are not active
-        }
-    });
-});
+  // Set initial background image
+  heroBackground.style.backgroundImage = backgroundImages[currentImageIndex]
+  heroBackground.style.opacity = "1"
+
+  // Change background image every 5 seconds
+  setInterval(changeBackgroundImage, 5000)
+
+  // Mobile menu toggle
+  const mobileMenu = document.querySelector(".mobile-menu")
+
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation()
+    mobileMenu.classList.toggle("show")
+  })
+
+  // Close mobile menu when clicking outside
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".header") && !event.target.closest(".mobile-menu")) {
+      mobileMenu.classList.remove("show")
+    }
+  })
+
+  // Close mobile menu when clicking a menu item
+  const mobileMenuItems = document.querySelectorAll(".mobile-menu a")
+  mobileMenuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      mobileMenu.classList.remove("show")
+    })
+  })
+})
+
