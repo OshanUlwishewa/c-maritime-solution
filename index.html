@@ -3,195 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="C Maritime Solution - Your trusted partner in maritime logistics and shipping services.">
     <title>C Maritime Solution</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Header Section -->
- <header class="header">
-    <a href="index.html" class="logo">
-        <img src="logo.png" alt="CMS Logo" class="logo-img">
-        <span class="site-name">
-            <span class="cms">C</span>
-            <span class="maritime-solution">Maritime Solution</span>
-        </span>
-    </a>
-    <nav class="header-right">
-        <a id="home-link" href="index.html">Home</a>
-        <a id="services-link" href="service.html">Services</a>
-        <a id="about-link" href="about.html" class="active">About Us</a> <!-- Add active class -->
-    </nav>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-</header>
-
-    <!-- breadcrumbdcrumb Navigation -->
-    <nav class="breadcrumb">
-        <a href="index.html">Home</a> &gt; <span>Welcome</span>  
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to C Maritime Solution</h1>
-            <p>Your trusted partner in maritime logistics and shipping services</p>
-            <a href="about.html" class="learn-more-btn">Learn More</a>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="CMS Logo" class="logo-img">
+                <span class="site-name">C MARITIME SOLUTION</span>
+            </a>
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
         </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>Who We Are</h2>
-        <p>C Maritime Solution is a leading provider in maritime logistics, offering comprehensive solutions to meet your shipping and transportation needs. With a global network and extensive expertise, we ensure smooth and efficient operations for businesses of all sizes.</p>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="container">
+                <h1>Welcome to C Maritime Solution</h1>
+                <p>Your trusted partner in maritime logistics and shipping services</p>
+                <a href="about.html" class="btn">Learn More</a>
+            </div>
+        </section>
 
-    <!-- Services Section -->
-    <section class="services-section">
-        <h2>Our Services</h2>
-        <p class="services-description">Discover our comprehensive range of services that ensure efficient and reliable solutions for your maritime needs.</p>
-        <div class="services-grid">
-            <div class="service-card">
-    <i class="fas fa-ship"></i>
-    <h3>Ships Crew Recruitment and Management</h3>
-    <p>We are maritime crew management company that specializes in providing the global marchan
-     marine with Sri Lankan crew.</p>
-    <br>
-    <p>Our focus on crewing agency services to offer ship owners, (blank) and operatiors provide solutions.</p>
-</div>
+        <section class="about">
+            <div class="container">
+                <h2>Who We Are</h2>
+                <p>C Maritime Solution is a leading provider in maritime logistics, offering comprehensive solutions to meet your shipping and transportation needs. With a global network and extensive expertise, we ensure smooth and efficient operations for businesses of all sizes.</p>
+            </div>
+        </section>
 
-            <div class="service-card">
-                <h3>Ships Crew Joining and Repatriation</h3>
-                <p>Facilitating crew changes and repatriation of seafares, aiming to reduce responsibilities and docuemnt required. facilities and simplify crew changes including seafares repatriation transit and joining ship.</p>
-
-            </div>
-            <div class="service-card">
-                <h3>Ships Chandlering</h3>
-                <p>Providing solutions to vessel owners, managing and operators, supply provisions, Bunkers, Supply Freshwater, Convoyanes of ship spares etc. </p>
-            </div>
-        </div>
-        <div class="services-button-container">
-            <a href="service.html" class="explore-button">Explore Services</a>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <h2>Navigating Success in Global Shipping</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="image1.jpg" alt="Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="image2.jpg" alt="Image 2">
-            </div>
-            <div class="gallery-item">
-                <img src="image3.jpg" alt="Image 3">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact form -->
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-</head>
-<body>
-    <div class="container">
-        <!-- Text Section -->
-        <div class="text-section">
-            <h1>We will reach out to you solely in response to your inquiry.</h1><br>
-            <div class="email-box">
-                Email us <strong>info@cmaritimesolution.com</strong>
-            </div>
-        </div>
-        <!-- Form Section -->
-        <div class="form-section">
-            <h2>Send us a message</h2>
-            <form action="send-email.php" method="POST">
-                <div class="form-group">
-                    <label for="name">Full Name*</label>
-                    <input type="text" id="name" name="name" required>
+        <section class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-ship"></i>
+                        <h3>Ships Crew Recruitment and Management</h3>
+                        <p>We specialize in providing the global merchant marine with skilled Sri Lankan crew, offering comprehensive crewing agency services.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Ships Crew Joining and Repatriation</h3>
+                        <p>We facilitate seamless crew changes and repatriation of seafarers, simplifying the process and reducing documentation requirements.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-box"></i>
+                        <h3>Ships Chandlering</h3>
+                        <p>We provide solutions to vessel owners, managing and supplying provisions, bunkers, fresh water, and conveyance of ship spares.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address*</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="text-center">
+                    <a href="services.html" class="btn btn-center">Explore Services</a>
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject">
-                </div>
-                <div class="form-group">
-                    <label for="message">Tell us more about your project*</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Send Message</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
+            </div>
+        </section>
 
-    <!-- Cover Photo Section -->
-    <section class="cover-photo">
-    <img src="coverphoto.jpg" alt="Maritime Cover Photo" class="cover-image">
-    <div class="cover-text">
-        <!-- Add any cover text here -->
-    </div>
-</section>
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Our Gallery</h2>
+                <div class="gallery">
+                    <img src="image1.jpg" alt="Maritime Image 1">
+                    <img src="image2.jpg" alt="Maritime Image 2">
+                    <img src="image3.jpg" alt="Maritime Image 3">
+                    <img src="image4.jpg" alt="Maritime Image 4">
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer Section -->
+        <section class="contact-form">
+            <div class="container">
+                <div class="form-container">
+                    <div class="text-section">
+                        <h2>Contact Us</h2>
+                        <p>We will reach out to you solely in response to your inquiry.</p>
+                        <div class="email-box">
+                            <p>Email us at:</p>
+                            <a href="mailto:info@cmaritimesolution.com">info@cmaritimesolution.com</a>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <form action="#" method="POST">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                            <input type="text" name="subject" placeholder="Subject">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-    <div class="footer-container">
-        <!-- Logo and Description -->
-        <div class="footer-logo">
-            <img src="logo.png" alt="C Maritime Solutions Logo">
-            <p>Your trusted partner in maritime logistics and shipping services.</p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </div>
-
-        <!-- Contact Information -->
-        <div class="footer-contact">
-            <h4>Contact Us</h4>
-            <p>Email: <a href="mailto:info@cmaritimesolution.com">info@cmaritimesolution.com</a></p>
-            <p>Phone: +94 (77) 770-1612</p>
-            <p>Whatsapp: +94 (76) 667-2037</p>
-            <p>Address: Colombo, Sri Lanka</p>
-        </div>
-
-        <!-- Social Media -->
-        <div class="footer-social">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="googleplus.png" alt="Twitter"></a>
-                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="CMS Logo" class="footer-logo-img">
+                    <p class="footer-tagline">Your trusted partner in maritime logistics and shipping services.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@cmaritimesolution.com">info@cmaritimesolution.com</a></p>
+                    <p><i class="fas fa-phone"></i> +94 (77) 770-1612</p>
+                    <p><i class="fab fa-whatsapp"></i> +94 (76) 667-2037</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                        <a href="#"><img src="googleplus.png" alt="Twitter"></a>
+                        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 C Maritime Solution
-        . All Rights Reserved.</p>
-        <p>Designed by Oshan Ulwishewa</p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 C Maritime Solution. All Rights Reserved.</p>
+                <p>Designed by Oshan Ulwishewa</p>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Link to external JS file -->
     <script src="script.js"></script>
-
+    <div class="mobile-menu">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
 </body>
 </html>
+
